@@ -35,6 +35,14 @@
     "nome": "Fundo de Ações",
     "categoria": "fundo",
     "risco": "alto",
+    "rentabilidade": "Dividend Yeld (DY) costuma ficar entre 6% e 12% ao ano",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Perfil moderado para diversificação e rende recorrente mensal"
+  },
+  {
+    "nome": "Fundo Imobiliário (FII)",
+    "categoria": "fundo",
+    "risco": "médio",
     "rentabilidade": "Variável",
     "aporte_minimo": 100.00,
     "indicado_para": "Perfil arrojado com foco no longo prazo"
