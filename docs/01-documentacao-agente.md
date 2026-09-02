@@ -62,10 +62,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | [Streamlit](https://streamlit.io/) |
+| LLM | Ollama (local) |
+| Base de Conhecimento | JSON/CSV mockados `data` |
+| Validação | Verificação de fatos e dados|
 
 ---
 
@@ -73,12 +73,14 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] Apenas dados fornecidos pelas fontes.
+- [ ] Não recomenda investimentos.
+- [ ] Admitir quando não sabe algo.
+- [ ] Aconselha apenas na organização das contas, mas sempre educando o cliente.
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- Não deve induzir o cliente a nenhum tipo de investimento específico;
+- Não acessa dados bancários sensívies;
+- Não substitui um profissional certificado.
