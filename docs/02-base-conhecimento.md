@@ -50,6 +50,7 @@ with open('data/produtos_financeiros.json', 'r', enconding='utf-8') as f:
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
+Os dados serão injetados diretamente no prompt para que o contexto seja o melhor possível. Em contextos maiores deveremos utilizar informações carregadas dinamicamente para gerar uma flexibilidade no prompt.
 
 ```text
 DADOS E PERFIL DO CLIENTE (data/perfil_investidor.json):
@@ -148,6 +149,10 @@ PRODUTOS DISPONIVEÍS PARA ENSINO (data/produtos_financeiros.json):
 
 TRANSAÇÕES VIA CARTÃO DE CRÉDITO (data/Credit_Card-Dataset.csv):
 *Linhas Exemplo (não compreendem a totalidade do arquivo)*
+Customer_ID,Age,Gender,Marital_Status,Education_Level,Employment_Status,Annual_Income,Credit_Score,Number_of_Credit_Lines,Credit_Utilization_Ratio,Debt_To_Income_Ratio,Number_of_Late_Payments,Tenure_in_Years,Total_Transactions_Last_Year,Total_Spend_Last_Year,Defaulted,CLV,Total_Transactions,Avg_Transaction_Amount,Max_Transaction_Amount,Min_Transaction_Amount,Fraud_Transactions,Unique_Merchant_Categories,Unique_Transaction_Cities
+CUST_00001,59,Male,Married,PhD,Unemployed,41442,642,4,0.44,0.4,2,22,166,13997,0,57310,22,454.3372727272727,1379.89,11.83,0,10,13
+CUST_00002,49,Male,Divorced,High School,Unemployed,85992,665,7,0.52,0.29,0,25,10,27768,0,124494,22,378.365,1939.47,7.0,1,8,13
+CUST_00003,35,Male,Married,Bachelor,Employed,58420,683,8,0.88,0.2,2,9,177,17979,1,46180,10,437.929,1712.14,1.92,0,7,9
 
 
 ```
@@ -162,10 +167,22 @@ TRANSAÇÕES VIA CARTÃO DE CRÉDITO (data/Credit_Card-Dataset.csv):
 Dados do Cliente:
 - Nome: João Silva
 - Perfil: Moderado
-- Saldo disponível: R$ 5.000
+- Reserva Atual: R$ 5000,00
+- Objetivo: R$ 10000,00
 
-Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+Resumo de gastos:
+- Moradia: R$ 1500,00
+- Alimentação: R$ 1000,00
+- Transporte: R$ 600,00
+- Saúde: R$ 250,00
+- Lazer: R$ 150,00
+- Total de Saídas: R$ 3500,00
+
+Produtos Disponíveis:
+- Tesouro Selic;
+- CDB Liquidez Diária;
+- LCI/LCA;
+- Fundo Multimercado;
+- Fundo de Ações;
+- Fundo Imobiliário (FII).
 ```
