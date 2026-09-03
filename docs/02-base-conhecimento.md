@@ -78,7 +78,7 @@ DADOS E PERFIL DO CLIENTE (data/perfil_investidor.json):
   ]
 }
 
-HISTÓRICO DE ATENDIMENTO DOS CLIENTES:
+HISTÓRICO DE ATENDIMENTO DOS CLIENTES (data/historico_atendimento.csv):
 
 data,descricao,categoria,valor,tipo
 2025-10-01,Salário,receita,5000.00,entrada
@@ -93,7 +93,62 @@ data,descricao,categoria,valor,tipo
 2025-10-25,Combustível,transporte,250.00,saida
 
 
-PRODUTOS DISPONIVEÍS PARA ENSINO:
+PRODUTOS DISPONIVEÍS PARA ENSINO (data/produtos_financeiros.json):
+
+[
+  {
+    "nome": "Tesouro Selic",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "rentabilidade": "100% da Selic",
+    "aporte_minimo": 30.00,
+    "indicado_para": "Reserva de emergência e iniciantes"
+  },
+  {
+    "nome": "CDB Liquidez Diária",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "rentabilidade": "102% do CDI",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Quem busca segurança com rendimento diário"
+  },
+  {
+    "nome": "LCI/LCA",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "rentabilidade": "95% do CDI",
+    "aporte_minimo": 1000.00,
+    "indicado_para": "Quem pode esperar 90 dias (isento de IR)"
+  },
+  {
+    "nome": "Fundo Multimercado",
+    "categoria": "fundo",
+    "risco": "medio",
+    "rentabilidade": "CDI + 2%",
+    "aporte_minimo": 500.00,
+    "indicado_para": "Perfil moderado que busca diversificação"
+  },
+  {
+    "nome": "Fundo de Ações",
+    "categoria": "fundo",
+    "risco": "alto",
+    "rentabilidade": "Dividend Yeld (DY) costuma ficar entre 6% e 12% ao ano",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Perfil moderado para diversificação e rende recorrente mensal"
+  },
+  {
+    "nome": "Fundo Imobiliário (FII)",
+    "categoria": "fundo",
+    "risco": "médio",
+    "rentabilidade": "Variável",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Perfil arrojado com foco no longo prazo"
+  }
+]
+
+TRANSAÇÕES VIA CARTÃO DE CRÉDITO (data/Credit_Card-Dataset.csv):
+*Linhas Exemplo (não compreendem a totalidade do arquivo)*
+
 
 ```
 
