@@ -11,6 +11,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 | `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
 | `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
 | `Credit_Card_Dataset.csv` | CSV | Análise de gastos de cartão de crédito|
+|`base_conhecimento_investimentos.json`|JSON| Tipos de investimentos e explicações|
 
 ---
 
@@ -194,6 +195,109 @@ CUST_00001,59,Male,Married,PhD,Unemployed,41442,642,4,0.44,0.4,2,22,166,13997,0,
 CUST_00002,49,Male,Divorced,High School,Unemployed,85992,665,7,0.52,0.29,0,25,10,27768,0,124494,22,378.365,1939.47,7.0,1,8,13
 CUST_00003,35,Male,Married,Bachelor,Employed,58420,683,8,0.88,0.2,2,9,177,17979,1,46180,10,437.929,1712.14,1.92,0,7,9
 
+INVESTIMENTOS EXPLICADOS (data/base_conhecimento_investimento.json)
+
+[
+    {
+        "id": "doc_01",
+        "categoria": "Títulos Públicos",
+        "subcategoria": "Empréstimo ao Governo",
+        "ativo": "Tesouro Selic",
+        "descricao": "Título público federal atrelado à taxa básica de juros (Selic), ideal para reservas de emergência devido ao baixo risco e liquidez diária.",
+        "fonte_nome": "Tesouro Nacional / B3",
+        "fonte_url": "https://www.tesourodireto.com.br/titulos/tipos-de-tesouro.htm"
+    },
+    {
+        "id": "doc_02",
+        "categoria": "Títulos Públicos",
+        "subcategoria": "Empréstimo ao Governo",
+        "ativo": "Tesouro IPCA+",
+        "descricao": "Título público focado no longo prazo que garante rentabilidade real, pois rende uma taxa fixa mais a variação oficial da inflação.",
+        "fonte_nome": "Tesouro Nacional / B3",
+        "fonte_url": "https://www.tesourodireto.com.br/titulos/tipos-de-tesouro.htm"
+    },
+    {
+        "id": "doc_03",
+        "categoria": "Títulos Bancários",
+        "subcategoria": "Empréstimo a Bancos",
+        "ativo": "CDB Liquidez Diária",
+        "descricao": "Certificado de Depósito Bancário emitido por instituições financeiras com o compromisso de recompra diária dos juros acumulados, protegida pelo FGC.",
+        "fonte_nome": "C6 Bank",
+        "fonte_url": "https://ajuda.c6bank.com.br/s/article/O-que-é-CDB"
+    },
+    {
+        "id": "doc_04",
+        "categoria": "Títulos Bancários",
+        "subcategoria": "Empréstimo a Bancos",
+        "ativo": "LCI/LCA",
+        "descricao": "Letras de Crédito emitidas por bancos para financiar exclusivamente os setores imobiliário (LCI) e do agronegócio (LCA), com atrativo de isenção de Imposto de Renda.",
+        "fonte_nome": "Banco Santander",
+        "fonte_url": "https://www.santander.com.br/blog/o-que-sao-lci-lca"
+    },
+    {
+        "id": "doc_05",
+        "categoria": "Títulos Bancários",
+        "subcategoria": "Empréstimo a Bancos",
+        "ativo": "Letra de Câmbio (LC)",
+        "descricao": "Título de renda fixa emitido por sociedades de crédito e financiamento (financeiras) para captar recursos, contando também com a garantia do FGC.",
+        "fonte_nome": "Portal do Investidor (CVM)",
+        "fonte_url": "https://www.investidor.gov.br/menu/Menu_Investidor/valores_mobiliarios/letra_cambio.html"
+    },
+    {
+        "id": "doc_06",
+        "categoria": "Títulos Bancários",
+        "subcategoria": "Empréstimo a Bancos",
+        "ativo": "Poupança",
+        "descricao": "Aplicação financeira mais tradicional do país, com rendimento fixado mensalmente por lei (0,5% + TR) e isenta de taxas ou impostos.",
+        "fonte_nome": "Banco Central do Brasil / Santander",
+        "fonte_url": "https://www.bcb.gov.br/meubc/faqs/c/poupanca"
+    },
+    {
+        "id": "doc_07",
+        "categoria": "Crédito Privado",
+        "subcategoria": "Empréstimo a Empresas",
+        "ativo": "CRI / CRA",
+        "descricao": "Certificados de Recebíveis lastreados em dívidas dos setores imobiliário (CRI) ou do agronegócio (CRA), emitidos por securitizadoras e isentos de IR.",
+        "fonte_nome": "Mercado Bitcoin",
+        "fonte_url": "https://www.mercadobitcoin.com.br/blog/educacao/tipos-de-investimentos/"
+    },
+    {
+        "id": "doc_08",
+        "categoria": "Crédito Privado",
+        "subcategoria": "Empréstimo a Empresas",
+        "ativo": "Debêntures Incentivadas",
+        "descricao": "Títulos de dívida de empresas privadas emitidos especificamente para financiar projetos de infraestrutura do país, contando com isenção fiscal para a pessoa física.",
+        "fonte_nome": "B3 - Bora Investir",
+        "fonte_url": "https://borainvestir.b3.com.br/tipos-de-investimentos/debentures-o-que-sao-e-como-investir-bora-investir/"
+    },
+    {
+        "id": "doc_09",
+        "categoria": "Fundos de Investimento",
+        "subcategoria": "Carteiras Coletivas",
+        "ativo": "Fundo Multimercado",
+        "descricao": "Carteira gerida por profissionais que mescla ativos de vários mercados (juros, câmbio, ações), buscando retornos acima da média por meio de estratégias flexíveis.",
+        "fonte_nome": "ANBIMA / Fundação ELOS",
+        "fonte_url": "https://www.anbima.com.br/pt_br/educar/certificacoes/cpa-20/material-de-estudos/fundos-multimercado.htm"
+    },
+    {
+        "id": "doc_10",
+        "categoria": "Fundos de Investimento",
+        "subcategoria": "Carteiras Coletivas",
+        "ativo": "Fundo de Ações",
+        "descricao": "Condomínio de investimento que aplica a maior parte de seu patrimônio na compra de papéis e participações de empresas listadas na Bolsa de Valores.",
+        "fonte_nome": "Efí Bank",
+        "fonte_url": "https://sejaefi.com.br/blog/qual-melhor-investimento-hoje-para-iniciantes"
+    },
+    {
+        "id": "doc_11",
+        "categoria": "Fundos de Investimento",
+        "subcategoria": "Carteiras Coletivas",
+        "ativo": "Fundo Imobiliário (FII)",
+        "descricao": "Comunidade de investidores que junta recursos para aplicar no desenvolvimento ou locação de grandes imóveis comerciais, distribuindo rendimentos mensais isentos.",
+        "fonte_nome": "Portal Mais Retorno",
+        "fonte_url": "https://maisretorno.com/portal/o-que-sao-fundos-imobiliarios-fii"
+    }
+]
 
 ```
 
