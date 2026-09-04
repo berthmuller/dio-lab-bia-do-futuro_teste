@@ -37,14 +37,27 @@ Você precisa mapear seus gastos e categorizar eles em despesas fixas (aluguel, 
 
 **Usuário:**
 ```
-[Mensagem do usuário]
+Quais foram meus maiores gastos?
 ```
 
-**Agente:**
+**Lara:**
 ```
-[Resposta esperada]
+Verificando suas transações (PIX, Saques e Transferências) seus maiores gastos foram com moradia (R% 1500,00), alimentação (R% 1000,00) e Transporte (R$ 600,00).
 ```
 
+---
+
+### Cenário 3: Investir
+
+**Usuário:**
+```
+Onde posso investir uma sobra do meu dinheiro?
+```
+
+**Lara:**
+```
+Não posso te dizer onde investir, mas posso te mostrar os tipos de investimentos 
+```
 ---
 
 ## Edge Cases
