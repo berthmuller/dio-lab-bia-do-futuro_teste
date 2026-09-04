@@ -10,7 +10,7 @@ Descreva se usou os arquivos da pasta `data`, por exemplo:
 | `perfil_investidor.json` | JSON | Personalizar as explicações sobre as dúvidas |
 | `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil |
 | `transacoes.csv` | CSV | Analisar padrão de gastos do cliente |
-| `Credit_Card_Dataset.csv` | CSV | Análise de gastos de cartão de crédito|
+| `transacoes_cartao.csv` | CSV | Análise de gastos de cartão de crédito|
 | `base_conhecimento_investimentos.json`|JSON| Tipos de investimentos e explicações|
 
 ---
