@@ -46,5 +46,45 @@
     "rentabilidade": "Variável",
     "aporte_minimo": 100.00,
     "indicado_para": "Perfil arrojado com foco no longo prazo"
-  }
+  },
+  {
+    "nome": "Poupança",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "rentabilidade": "0,5% ao mês + TR",
+    "aporte_minimo": 0.01,
+    "indicado_para": "Quem busca liquidez imediata e facilidade de movimentação"
+},
+{
+    "nome": "CRI / CRA (Certificados de Recebíveis)",
+    "categoria": "renda_fixa_credito_privado",
+    "risco": "médio",
+    "rentabilidade": "Isenta de IR (Geralmente atrelada ao CDI ou IPCA + bônus)",
+    "aporte_minimo": 1000.00,
+    "indicado_para": "Investidores moderados que buscam isenção de imposto e aceitam menor liquidez"
+},
+{
+    "nome": "Tesouro IPCA+",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "rentabilidade": "IPCA (Inflação) + Taxa Prefixada (ex: ~7% a 8% a.a.)",
+    "aporte_minimo": 30.00,
+    "indicado_para": "Quem busca proteger o poder de compra contra a inflação no longo prazo"
+},
+{
+    "nome": "Debêntures Incentivadas",
+    "categoria": "renda_fixa_credito_privado",
+    "risco": "médio a alto",
+    "rentabilidade": "Isenta de IR (Geralmente IPCA + taxa fixa robusta)",
+    "aporte_minimo": 1000.00,
+    "indicado_para": "Quem deseja financiar grandes obras de infraestrutura em troca de altos retornos isentos"
+},
+{
+    "nome": "Letra de Câmbio (LC)",
+    "categoria": "renda_fixa",
+    "risco": "baixo",
+    "rentabilidade": "Geralmente entre 100% e 120% do CDI",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Quem busca segurança do FGC com retornos potencialmente maiores que os de grandes bancos"
+}
 ]
