@@ -188,12 +188,73 @@ PRODUTOS DISPONIVEÍS PARA ENSINO (data/produtos_financeiros.json):
 }
 ]
 
-TRANSAÇÕES VIA CARTÃO DE CRÉDITO (data/Credit_Card-Dataset.csv):
-*Linhas Exemplo (não compreendem a totalidade do arquivo)*
-Customer_ID,Age,Gender,Marital_Status,Education_Level,Employment_Status,Annual_Income,Credit_Score,Number_of_Credit_Lines,Credit_Utilization_Ratio,Debt_To_Income_Ratio,Number_of_Late_Payments,Tenure_in_Years,Total_Transactions_Last_Year,Total_Spend_Last_Year,Defaulted,CLV,Total_Transactions,Avg_Transaction_Amount,Max_Transaction_Amount,Min_Transaction_Amount,Fraud_Transactions,Unique_Merchant_Categories,Unique_Transaction_Cities
-CUST_00001,59,Male,Married,PhD,Unemployed,41442,642,4,0.44,0.4,2,22,166,13997,0,57310,22,454.3372727272727,1379.89,11.83,0,10,13
-CUST_00002,49,Male,Divorced,High School,Unemployed,85992,665,7,0.52,0.29,0,25,10,27768,0,124494,22,378.365,1939.47,7.0,1,8,13
-CUST_00003,35,Male,Married,Bachelor,Employed,58420,683,8,0.88,0.2,2,9,177,17979,1,46180,10,437.929,1712.14,1.92,0,7,9
+TRANSAÇÕES VIA CARTÃO DE CRÉDITO (data/transacoes_cartao.csv):
+cliente_id,cliente_nome,data,descricao,categoria,valor,parcelas,cartao_bandeira
+CLI001,João Silva,2025-10-02,Supermercado Extra,alimentacao,320.50,1,Mastercard
+CLI001,João Silva,2025-10-04,Posto Ipiranga,transporte,180.00,1,Mastercard
+CLI001,João Silva,2025-10-06,Farmácia Droga Raia,saude,65.90,1,Mastercard
+CLI001,João Silva,2025-10-09,Amazon - Fone de Ouvido,compras,199.00,3,Mastercard
+CLI001,João Silva,2025-10-14,Restaurante Sushi,alimentacao,145.00,1,Mastercard
+CLI001,João Silva,2025-10-18,Loja de Roupas Renner,vestuario,289.90,2,Mastercard
+CLI001,João Silva,2025-10-22,Cinema Cinemark,lazer,68.00,1,Mastercard
+CLI001,João Silva,2025-10-28,Uber,transporte,52.30,1,Mastercard
+CLI002,Maria Oliveira,2025-10-01,Supermercado Pão de Açúcar,alimentacao,410.20,1,Visa
+CLI002,Maria Oliveira,2025-10-05,Academia Smart Fit,saude,109.90,1,Visa
+CLI002,Maria Oliveira,2025-10-08,Magazine Luiza - Liquidificador,compras,159.00,1,Visa
+CLI002,Maria Oliveira,2025-10-11,Netflix,lazer,55.90,1,Visa
+CLI002,Maria Oliveira,2025-10-15,Posto Shell,transporte,220.00,1,Visa
+CLI002,Maria Oliveira,2025-10-19,Restaurante Italiano,alimentacao,175.50,1,Visa
+CLI002,Maria Oliveira,2025-10-23,Farmácia Pacheco,saude,42.00,1,Visa
+CLI002,Maria Oliveira,2025-10-27,Loja Centauro - Tênis,vestuario,399.00,4,Visa
+CLI003,Carlos Mendes,2025-10-03,Restaurante Outback,alimentacao,210.00,1,Elo
+CLI003,Carlos Mendes,2025-10-06,Posto BR,transporte,190.00,1,Elo
+CLI003,Carlos Mendes,2025-10-10,Farmácia São Paulo,saude,78.50,1,Elo
+CLI003,Carlos Mendes,2025-10-13,Loja C&A,vestuario,159.90,2,Elo
+CLI003,Carlos Mendes,2025-10-17,Spotify,lazer,21.90,1,Elo
+CLI003,Carlos Mendes,2025-10-21,Supermercado Carrefour,alimentacao,380.00,1,Elo
+CLI003,Carlos Mendes,2025-10-25,iFood,alimentacao,95.40,1,Elo
+CLI003,Carlos Mendes,2025-10-29,Uber,transporte,38.00,1,Elo
+CLI004,Ana Beatriz,2025-10-02,Supermercado Assaí,alimentacao,295.00,1,Mastercard
+CLI004,Ana Beatriz,2025-10-07,Salão de Beleza,servicos,150.00,1,Mastercard
+CLI004,Ana Beatriz,2025-10-09,Livraria Saraiva,educacao,89.90,1,Mastercard
+CLI004,Ana Beatriz,2025-10-12,Posto Ale,transporte,160.00,1,Mastercard
+CLI004,Ana Beatriz,2025-10-16,Restaurante Japonês,alimentacao,132.00,1,Mastercard
+CLI004,Ana Beatriz,2025-10-20,Cinema Cinemark,lazer,58.00,1,Mastercard
+CLI004,Ana Beatriz,2025-10-24,Farmácia Drogasil,saude,54.30,1,Mastercard
+CLI004,Ana Beatriz,2025-10-30,Loja Zara,vestuario,349.00,3,Mastercard
+CLI005,Pedro Almeida,2025-10-01,Supermercado Dia,alimentacao,265.40,1,Visa
+CLI005,Pedro Almeida,2025-10-05,Posto Petrobras,transporte,210.00,1,Visa
+CLI005,Pedro Almeida,2025-10-08,Farmácia Pague Menos,saude,48.70,1,Visa
+CLI005,Pedro Almeida,2025-10-11,Livraria Cultura,educacao,112.00,1,Visa
+CLI005,Pedro Almeida,2025-10-15,Restaurante Chinês,alimentacao,98.50,1,Visa
+CLI005,Pedro Almeida,2025-10-19,Loja Decathlon,vestuario,229.90,2,Visa
+CLI005,Pedro Almeida,2025-10-23,Disney+,lazer,33.90,1,Visa
+CLI005,Pedro Almeida,2025-10-27,iFood,alimentacao,72.00,1,Visa
+CLI006,Fernanda Costa,2025-10-02,Supermercado Big,alimentacao,340.00,1,Elo
+CLI006,Fernanda Costa,2025-10-06,Clínica Odontológica,saude,320.00,3,Elo
+CLI006,Fernanda Costa,2025-10-09,Posto Ipiranga,transporte,175.00,1,Elo
+CLI006,Fernanda Costa,2025-10-13,Loja Riachuelo,vestuario,189.90,1,Elo
+CLI006,Fernanda Costa,2025-10-16,Cinema Kinoplex,lazer,45.00,1,Elo
+CLI006,Fernanda Costa,2025-10-20,Restaurante Português,alimentacao,168.00,1,Elo
+CLI006,Fernanda Costa,2025-10-24,Farmácia Nissei,saude,39.80,1,Elo
+CLI006,Fernanda Costa,2025-10-29,Uber,transporte,44.60,1,Elo
+CLI007,Rafael Souza,2025-10-03,Supermercado Mundial,alimentacao,298.70,1,Mastercard
+CLI007,Rafael Souza,2025-10-07,Academia Bio Ritmo,saude,129.90,1,Mastercard
+CLI007,Rafael Souza,2025-10-10,Posto Ale,transporte,205.00,1,Mastercard
+CLI007,Rafael Souza,2025-10-14,Loja Fast Shop - Fone,compras,349.00,4,Mastercard
+CLI007,Rafael Souza,2025-10-17,iFood,alimentacao,85.30,1,Mastercard
+CLI007,Rafael Souza,2025-10-21,Cinema Cinemark,lazer,64.00,1,Mastercard
+CLI007,Rafael Souza,2025-10-25,Farmácia Drogasil,saude,58.20,1,Mastercard
+CLI007,Rafael Souza,2025-10-30,Restaurante Árabe,alimentacao,140.00,1,Mastercard
+CLI008,Juliana Ramos,2025-10-01,Supermercado Zaffari,alimentacao,355.00,1,Visa
+CLI008,Juliana Ramos,2025-10-04,Posto Shell,transporte,198.00,1,Visa
+CLI008,Juliana Ramos,2025-10-08,Farmácia Panvel,saude,61.40,1,Visa
+CLI008,Juliana Ramos,2025-10-12,Loja Renner,vestuario,269.90,2,Visa
+CLI008,Juliana Ramos,2025-10-16,Restaurante Vegano,alimentacao,110.00,1,Visa
+CLI008,Juliana Ramos,2025-10-20,Spotify,lazer,21.90,1,Visa
+CLI008,Juliana Ramos,2025-10-24,Curso Online Udemy,educacao,49.90,1,Visa
+CLI008,Juliana Ramos,2025-10-28,Uber,transporte,41.20,1,Visa
+
 
 INVESTIMENTOS EXPLICADOS (data/base_conhecimento_investimento.json)
 
