@@ -13,20 +13,19 @@ ollama run gpt-oss "Olá mundo!"
 
 ```
 
-## Exemplo de requirements.txt
+## Código Completo
 
-```
-streamlit
-openai
-python-dotenv
-```
+Todo o código fonte está no arquivo `app.py`
 
 ## Como Rodar
 
 ```bash
-# Instalar dependências
-pip install -r requirements.txt
+# 1. Instalar dependências
+pip install streamlit pandas requests
 
-# Rodar a aplicação
+#2. Verificar se o Ollama está rodando
+ollama serve
+
+#3. Rodar o app
 streamlit run app.py
 ```
