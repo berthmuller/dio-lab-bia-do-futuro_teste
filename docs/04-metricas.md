@@ -41,11 +41,17 @@ Crie testes simples para validar seu agente:
 - **Resposta esperada:** Agente informa que só trata de finanças
 - **Resultado:** [X] Correto  [ ] Incorreto
 
-### Teste 4: Informação inexistente
-- **Pergunta:** "Quanto rende o produto XYZ?"
-- **Resposta esperada:** Agente admite não ter essa informação
-- **Resultado:** [ ] Correto  [ ] Incorreto
+### Teste 4: Informação sobre produtos
+- **Pergunta:** "Qual o rendimento do FII?"
+- **Resposta esperada:** Agente responde conforme os arquivos `base_conhecimento_investimento.csv` e `produtos_financeiros.csv`
+- **Resultado:** [X] Correto  [ ] Incorreto
 
+### Teste 4: Informação sobre produto inexistente
+- **Pergunta:** "Qual o rendimento do produto XPTO?"
+- **Resposta esperada:** Agente responde que não sabe sobre o produto
+- **Resultado:** [X] Correto  [ ] Incorreto
+
+  
 ---
 
 ## Resultados
@@ -53,7 +59,7 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- [Liste aqui]
+- Respondeu corretamente todas as 
 
 **O que pode melhorar:**
 - [Liste aqui]
