@@ -1,149 +1,134 @@
-# 🤖 Agente Financeiro Inteligente com IA Generativa
+# Lara — Sua Organizadora Financeira
 
-## Contexto
-
-Os assistentes virtuais no setor financeiro estão evoluindo de simples chatbots reativos para **agentes inteligentes e proativos**. Neste desafio, você vai idealizar e prototipar um agente financeiro que utiliza IA Generativa para:
-
-- **Antecipar necessidades** ao invés de apenas responder perguntas
-- **Personalizar** sugestões com base no contexto de cada cliente
-- **Cocriar soluções** financeiras de forma consultiva
-- **Garantir segurança** e confiabilidade nas respostas (anti-alucinação)
-
-> [!TIP]
-> Na pasta [`examples/`](./examples/) você encontra referências de implementação para cada etapa deste desafio.
+> Um agente de IA generativa que ajuda pessoas comuns a entenderem para onde vai o próprio dinheiro — sem julgamento, sem jargão e sem empurrar investimento nenhum.
 
 ---
 
-## O Que Você Deve Entregar
+## 🧠 A ideia por trás da Lara
 
-### 1. Documentação do Agente
+A maioria das pessoas não tem dificuldade em *ganhar* dinheiro, tem dificuldade em **entender onde ele foi parar**. Contas de luz, PIX aleatório, fatura de cartão que sempre "surpreende" — a origem dos gastos costuma ser um mistério.
 
-Defina **o que** seu agente faz e **como** ele funciona:
+A Lara nasceu para resolver exatamente isso: um agente **consultivo e educativo**, que categoriza gastos, explica investimentos (sem recomendar nenhum) e trata cada pessoa como alguém capaz de organizar sua própria vida financeira — do iniciante completo ao mais experiente.
 
-- **Caso de Uso:** Qual problema financeiro ele resolve? (ex: consultoria de investimentos, planejamento de metas, alertas de gastos)
-- **Persona e Tom de Voz:** Como o agente se comporta e se comunica?
-- **Arquitetura:** Fluxo de dados e integração com a base de conhecimento
-- **Segurança:** Como evitar alucinações e garantir respostas confiáveis?
-
-📄 **Template:** [`docs/01-documentacao-agente.md`](./docs/01-documentacao-agente.md)
+Ela não é uma consultora de investimentos. Ela é a amiga que te ajuda a entender a sua própria planilha.
 
 ---
 
-### 2. Base de Conhecimento
+## 🗣️ Quem é a Lara
 
-Utilize os **dados mockados** disponíveis na pasta [`data/`](./data/) para alimentar seu agente:
+| | |
+|---|---|
+| **Personalidade** | Consultiva, cordial, didática — como um professor que nunca julga |
+| **Tom de voz** | Formal, acessível e empático |
+| **O que ela faz** | Categoriza gastos, explica produtos financeiros, ajuda a planejar metas |
+| **O que ela nunca faz** | Recomendar um investimento específico, acessar dados sensíveis, substituir um profissional certificado |
 
-| Arquivo | Formato | Descrição |
-|---------|---------|-----------|
-| `transacoes.csv` | CSV | Histórico de transações do cliente |
-| `historico_atendimento.csv` | CSV | Histórico de atendimentos anteriores |
-| `perfil_investidor.json` | JSON | Perfil e preferências do cliente |
-| `produtos_financeiros.json` | JSON | Produtos e serviços disponíveis |
+**Exemplo de como ela fala:**
 
-Você pode adaptar ou expandir esses dados conforme seu caso de uso.
-
-📄 **Template:** [`docs/02-base-conhecimento.md`](./docs/02-base-conhecimento.md)
-
----
-
-### 3. Prompts do Agente
-
-Documente os prompts que definem o comportamento do seu agente:
-
-- **System Prompt:** Instruções gerais de comportamento e restrições
-- **Exemplos de Interação:** Cenários de uso com entrada e saída esperada
-- **Tratamento de Edge Cases:** Como o agente lida com situações limite
-
-📄 **Template:** [`docs/03-prompts.md`](./docs/03-prompts.md)
+> **Usuário:** Onde posso investir uma sobra do meu dinheiro?
+>
+> **Lara:** Não posso te dizer *onde* investir, mas posso te mostrar os tipos de investimento que existem e como cada um funciona. Assim você decide com mais segurança.
 
 ---
 
-### 4. Aplicação Funcional
+## 🏗️ Arquitetura
 
-Desenvolva um **protótipo funcional** do seu agente:
+```mermaid
+flowchart TD
+    A[Cliente] -->|Mensagem| B[Interface Streamlit]
+    B --> C[LLM via Ollama]
+    C --> D[Base de Conhecimento]
+    D --> C
+    C --> E[Regras Anti-Alucinação]
+    E --> F[Resposta ao Cliente]
+```
 
-- Chatbot interativo (sugestão: Streamlit, Gradio ou similar)
-- Integração com LLM (via API ou modelo local)
-- Conexão com a base de conhecimento
-
-📁 **Pasta:** [`src/`](./src/)
-
----
-
-### 5. Avaliação e Métricas
-
-Descreva como você avalia a qualidade do seu agente:
-
-**Métricas Sugeridas:**
-- Precisão/assertividade das respostas
-- Taxa de respostas seguras (sem alucinações)
-- Coerência com o perfil do cliente
-
-📄 **Template:** [`docs/04-metricas.md`](./docs/04-metricas.md)
+| Camada | Tecnologia |
+|---|---|
+| Interface | [Streamlit](https://streamlit.io/) |
+| Modelo | Ollama (`gpt-oss`, local) |
+| Base de conhecimento | JSON/CSV em `data/` |
+| Validação | Regras de escopo e checagem de fatos no prompt |
 
 ---
 
-### 6. Pitch
+## 📚 Base de conhecimento
 
-Grave um **pitch de 3 minutos** (estilo elevador) apresentando:
+A Lara enxerga o cliente através de dados mockados que simulam uma vida financeira real:
 
-- Qual problema seu agente resolve?
-- Como ele funciona na prática?
-- Por que essa solução é inovadora?
+| Arquivo | O que dá pra Lara |
+|---|---|
+| `transacoes.csv` | Padrão de gastos gerais |
+| `transacoes_cartao.csv` | Padrão de gastos no cartão de crédito |
+| `historico_atendimento.csv` | Contexto de conversas anteriores |
+| `perfil_investidor.json` | Perfil e metas do cliente |
+| `produtos_financeiros.json` | Catálogo de produtos para fins **educativos** |
+| `base_conhecimento_investimentos.json` | Explicações detalhadas de cada tipo de investimento, com fonte |
 
-📄 **Template:** [`docs/05-pitch.md`](./docs/05-pitch.md)
-
----
-
-## Ferramentas Sugeridas
-
-Todas as ferramentas abaixo possuem versões gratuitas:
-
-| Categoria | Ferramentas |
-|-----------|-------------|
-| **LLMs** | [ChatGPT](https://chat.openai.com/), [Copilot](https://copilot.microsoft.com/), [Gemini](https://gemini.google.com/), [Claude](https://claude.ai/), [Ollama](https://ollama.ai/) |
-| **Desenvolvimento** | [Streamlit](https://streamlit.io/), [Gradio](https://www.gradio.app/), [Google Colab](https://colab.research.google.com/) |
-| **Orquestração** | [LangChain](https://www.langchain.com/), [LangFlow](https://www.langflow.org/), [CrewAI](https://www.crewai.com/) |
-| **Diagramas** | [Mermaid](https://mermaid.js.org/), [Draw.io](https://app.diagrams.net/), [Excalidraw](https://excalidraw.com/) |
+> Em relação ao template original, expandi essa base incluindo um dataset de **gastos de cartão de crédito** (o foco da Lara é justamente organização financeira do dia a dia) e adicionei o **Fundo Imobiliário (FII)** à lista de produtos explicados.
 
 ---
 
-## Estrutura do Repositório
+## 🔒 Segurança e anti-alucinação
+
+Regras que guiam toda resposta da Lara:
+
+1. Sempre baseada nos dados fornecidos — nunca inventa números.
+2. Nunca recomenda um investimento específico, apenas explica.
+3. Admite quando não sabe algo, em vez de "chutar".
+4. Não acessa dados sensíveis nem informações de outros clientes.
+5. Não sai do escopo de finanças pessoais.
+6. Respostas curtas (até 3 parágrafos), sempre confirmando se o cliente entendeu.
+
+---
+
+## 🚀 Como rodar
+
+```bash
+# 1. Instale o Ollama (https://ollama.com) e baixe o modelo
+ollama pull gpt-oss
+
+# 2. Instale as dependências do projeto
+pip install streamlit pandas requests
+
+# 3. Suba o servidor do Ollama
+ollama serve
+
+# 4. Rode a aplicação
+streamlit run src/app.py
+```
+
+O código completo da aplicação está em [`src/app.py`](./src/app.py).
+
+---
+
+## 📂 Estrutura do repositório
 
 ```
-📁 lab-agente-financeiro/
-│
+📁 LaraIA/
 ├── 📄 README.md
-│
-├── 📁 data/                          # Dados mockados para o agente
-│   ├── historico_atendimento.csv     # Histórico de atendimentos (CSV)
-│   ├── perfil_investidor.json        # Perfil do cliente (JSON)
-│   ├── produtos_financeiros.json     # Produtos disponíveis (JSON)
-│   └── transacoes.csv                # Histórico de transações (CSV)
-│
-├── 📁 docs/                          # Documentação do projeto
-│   ├── 01-documentacao-agente.md     # Caso de uso e arquitetura
-│   ├── 02-base-conhecimento.md       # Estratégia de dados
-│   ├── 03-prompts.md                 # Engenharia de prompts
-│   ├── 04-metricas.md                # Avaliação e métricas
-│   └── 05-pitch.md                   # Roteiro do pitch
-│
-├── 📁 src/                           # Código da aplicação
-│   └── app.py                        # (exemplo de estrutura)
-│
-├── 📁 assets/                        # Imagens e diagramas
-│   └── ...
-│
-└── 📁 examples/                      # Referências e exemplos
-    └── README.md
+├── 📁 data/            # Base de dados mockada (transações, perfil, produtos)
+├── 📁 docs/            # Documentação: persona, prompts, métricas, pitch
+├── 📁 src/             # Aplicação (Streamlit + Ollama)
+└── 📁 assets/          # Diagramas e roteiro do laboratório
 ```
 
 ---
 
-## Dicas Finais
+## 🧪 Como a Lara é avaliada
 
-1. **Comece pelo prompt:** Um bom system prompt é a base de um agente eficaz
-2. **Use os dados mockados:** Eles garantem consistência e evitam problemas com dados sensíveis
-3. **Foque na segurança:** No setor financeiro, evitar alucinações é crítico
-4. **Teste cenários reais:** Simule perguntas que um cliente faria de verdade
-5. **Seja direto no pitch:** 3 minutos passam rápido, vá ao ponto
+Três frentes de teste guiam a evolução da Lara:
+
+- **Assertividade** — ela responde exatamente o que foi perguntado?
+- **Segurança** — ela evita inventar dado financeiro?
+- **Coerência** — a resposta faz sentido para o perfil daquele cliente?
+
+Detalhes dos cenários de teste em [`docs/04-metricas.md`](./docs/04-metricas.md).
+
+---
+
+## 🙋 Sobre este projeto
+
+Este repositório é meu projeto pessoal desenvolvido a partir do desafio *"Agente Financeiro Inteligente com IA Generativa"*, da [DIO](https://www.dio.me/). A estrutura base do laboratório foi fornecida como template — a persona da Lara, as adaptações na base de dados, os prompts, o código da aplicação e este README são meus.
+
+Feito por **Berth Muller**.
