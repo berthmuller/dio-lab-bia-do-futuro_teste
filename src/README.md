@@ -1,15 +1,16 @@
-# Código da Aplicação
+# Passo a passo da execulção
 
-Esta pasta contém o código do seu agente financeiro.
+## Setup do Ollama
 
-## Estrutura Sugerida
+```bash
 
-```
-src/
-├── app.py              # Aplicação principal (Streamlit/Gradio)
-├── agente.py           # Lógica do agente
-├── config.py           # Configurações (API keys, etc.)
-└── requirements.txt    # Dependências
+#1. Instalar Ollama (ollama.com)
+#2. Baixar o modelo
+ollama pull gpt-oss
+
+#3. Testar o funcionamento
+ollama run gpt-oss "Olá mundo!"
+
 ```
 
 ## Exemplo de requirements.txt
