@@ -63,7 +63,7 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- Respondeu corretamente todas as 
+- Respondeu corretamente todas as perguntas e os edges cases, apesar de 
 
 **O que pode melhorar:**
 - [Liste aqui]
