@@ -28,26 +28,8 @@ Inclusão de um dataset de gastos em cartão de crédito para aumentar a quantid
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-Os dados poderão ser injetados diretamente no prompt (Ctrl + C, Ctrl + V) ou carregar os arquivos no código.
+Os dados poderão ser injetados diretamente no prompt (Ctrl + C, Ctrl + V) ou carregar os arquivos no código. Conforme o arquivo `app.py`.
 
-```python
-
-import pandas as pd
-import json
-
-#CSV
-historico = pd.read_csv('data/historico_atendimento.csv')
-transacoes = pd.read_csv('data/transacoes.csv')
-cartaocredito = pd.read_csv('data/Credit_Card_Dataset.csv')
-
-#JSONs
-with open('data/perfil_investidor.json', 'r', enconding='utf-8') as f:
-  perfil = json.load(f)
-
-with open('data/produtos_financeiros.json', 'r', enconding='utf-8') as f:
-  produtos = json.load(f)
-
-```
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
