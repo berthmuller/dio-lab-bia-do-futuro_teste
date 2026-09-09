@@ -63,19 +63,9 @@ Crie testes simples para validar seu agente:
 Após os testes, registre suas conclusões:
 
 **O que funcionou bem:**
-- Respondeu corretamente todas as perguntas e os edges cases, apesar de 
+- Respondeu corretamente todas as perguntas e os edges cases;
+- Respostas bem elaboradas e seguindo as normas adicionadas;
+- Não ocorreu nenhuma alucinação nos testes.
 
 **O que pode melhorar:**
-- [Liste aqui]
-
----
-
-## Métricas Avançadas (Opcional)
-
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
-
-- Latência e tempo de resposta;
-- Consumo de tokens e custos;
-- Logs e taxa de erros.
-
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
+- Respostas longas apesar do limite imposto
